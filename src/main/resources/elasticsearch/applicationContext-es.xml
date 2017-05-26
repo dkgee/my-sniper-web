@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:context="http://www.springframework.org/schema/context"   
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	
+	<description>elasticsearch索引配置</description>
+    <context:component-scan base-package="com.sniper.es" />
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+        <property name="searchSystemEnvironment" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:elasticsearch/elasticsearch.properties</value>
+            </list>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="projectx.index.dir">/var/tmp/index</prop>
+                <prop key="projectx.index.dir.create">true</prop>
+            </props>
+        </property>
+    </bean>
+											
+	<bean id="esClient" class="org.projectx.elasticsearch.ElasticsearchTransportClientFactoryBean">
+        <property name="transportAddresses">
+        	<map>  
+        		<entry key="${es.transport.host1}" value="${es.transport.port}" />
+        	</map>
+        </property>
+        <property name="configLocation" value="${es.conf}" />
+    </bean>
+    
+    <bean id="clientTemplate" class="org.projectx.elasticsearch.ClientTemplate">
+        <constructor-arg ref="esClient" />
+        <constructor-arg value="${es.index.name}" />
+    </bean>
+	
+</beans>

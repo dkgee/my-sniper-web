@@ -1,0 +1,172 @@
+/*
+
+  weiboUser 微博账号
+
+    1.id                 doc id
+    2.uid                账号id
+    3.crawler_time       爬取时间
+    4.create_time        创建时间
+    5.update_time        更新时间
+    6.group_id           分组id
+    7.gender             性别
+    8.follow_count       关注数
+    9.follower_count     粉丝数
+    10.status_count      微博数
+    11.domain            域名
+    12.nickname          微博名
+    13.location          地址
+    14.profile_image_url 头像图片链接
+    15.desc              描述
+    16.is_detect         是否已监测
+
+
+  weiboStatus 微博内容
+
+    1.id               doc id
+    2.mid              微博内容唯一id
+    3.uid              唯一id
+    4.repost_count     转发数
+    5.comment_count    评论数
+    6.like_count       点赞数
+    7.crawler_time     爬取时间
+    8.create_time      创建时间
+    9.update_time      更新时间
+    10.pic_urls        微博图片
+    11.is_audio        是否音频
+    12.is_video        是否视频
+    13.is_infraction   是否违规
+    14.is_original     是否原创
+    15.keywords        已匹配关键词
+    16.state           内容状态: 同wechat
+    17.infractions     违规条款
+    18.task_id         审看任务id
+    19.url             微博链接
+    20.content         内容
+    21.source          终端
+
+*/
+{
+  "mapping": {
+    "weiboUser": {
+      "properties": {
+        "id": {
+          "type": "keyword"
+        },
+        "uid": {
+          "type": "keyword"
+        },
+        "crawler_time": {
+          "type": "date"
+        },
+        "create_time": {
+          "type": "date"
+        },
+        "update_time": {
+          "type": "date"
+        },
+        "group_id": {
+          "type": "integer"
+        },
+        "gender": {
+          "type": "keyword"
+        },
+        "follow_count": {
+          "type": "integer"
+        },
+        "follower_count": {
+          "type": "integer"
+        },
+        "status_count": {
+          "type": "integer"
+        },
+        "domain": {
+          "type": "keyword"
+        },
+        "nickname": {
+          "type": "keyword"
+        },
+        "location": {
+          "type": "keyword"
+        },
+        "profile_image_url": {
+          "type": "keyword"
+        },
+        "desc": {
+          "type": "keyword"
+        },
+        "is_detect": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "weiboStatus": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "mid": {
+        "type": "keyword"
+      },
+      "uid": {
+        "type": "keyword"
+      },
+      "repost_count": {
+        "type": "integer"
+      },
+      "comment_count": {
+        "type": "integer"
+      },
+      "like_count": {
+        "type": "integer"
+      },
+      "crawler_time": {
+        "type": "date"
+      },
+      "create_time": {
+        "type": "date"
+      },
+      "update_time": {
+        "type": "date"
+      },
+      "pic_urls": {
+        "type": "keyword"
+      },
+      "is_audio": {
+        "type": "boolean"
+      },
+      "is_video": {
+        "type": "boolean"
+      },
+      "is_infraction": {
+        "type": "boolean"
+      },
+      "is_original": {
+        "type": "boolean"
+      },
+      "keywords": {
+        "type": "keyword"
+      },
+      "state": {
+        "type": "integer"
+      },
+      "source": {
+        "type": "keyword"
+      },
+      "infractions": {
+        "type": "integer"
+      },
+      "task_id": {
+        "type": "integer"
+      },
+      "url": {
+        "type": "keyword"
+      },
+      "content": {
+        "analyzer": "ik_smart",
+        "type": "text"
+      }
+    }
+  }
+}
+

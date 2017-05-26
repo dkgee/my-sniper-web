@@ -1,0 +1,160 @@
+/*
+
+     mp 微信账号
+
+    1.id                doc id
+    2.wx_biz            账号唯一id
+    3.wx_id             微信号
+    4.wx_name           微信名
+    5.type              账号类型
+    6.group_id          分组id
+    7.profile_image_url 头像url
+    8.desc              账号描述
+    9.crawler_time      爬取时间
+    10.create_time      创建时间
+    11.update_time      更新时间
+    12.is_detect        是否已监测
+
+
+    wechat 微信内容
+
+    1.id              doc id
+    2.article_id      内容唯一id
+    3.wx_biz          账号id
+    4.author          作者
+    5.title           标题
+    6.brief           概要
+    7.content         内容
+    8.read_count      阅读数
+    9.like_count      点赞数
+    10.url            内容url
+    11.is_audio       是否音频
+    12.is_video       是否视频
+    13.is_infraction  是否违规
+    14.is_headline    是否头条
+    15.is_original    是否原创
+    16.keywords       已匹配关键词
+    17.state          内容状态: -1.正常 0.待处理, 1.取证中, 2.已分派 3.已取证, 4.处理中, 5.文书回退, 6.已处罚, 7.已处理, 8.待验证, 9.封堵失败, 10.封堵成功
+    18.infractions    违规条款
+    19.task_id        审看任务id
+    20.create_time    创建时间
+    21.crawler_time   爬虫入库时间
+    22.update_time    更新时间
+
+*/
+
+{
+  "mappings": {
+    "mp": {
+      "properties": {
+        "id": {
+          "type": "keyword"
+        },
+        "wx_biz": {
+          "type": "keyword"
+        },
+        "wx_id": {
+          "type": "keyword"
+        },
+        "wx_name": {
+          "type": "keyword"
+        },
+        "type": {
+          "type": "keyword"
+        },
+        "group_id": {
+          "type": "integer"
+        },
+        "profile_image_url": {
+          "type": "keyword"
+        },
+        "desc": {
+          "type": "keyword"
+        },
+        "crawler_time": {
+          "type": "date"
+        },
+        "create_time": {
+          "type": "date"
+        },
+        "update_time": {
+          "type": "date"
+        },
+        "is_detect": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "wechat": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "article_id": {
+        "type": "keyword"
+      },
+      "wx_biz": {
+        "type": "keyword"
+      },
+      "author": {
+        "type": "keyword"
+      },
+      "title": {
+        "type": "keyword"
+      },
+      "brief": {
+        "type": "keyword"
+      },
+      "content": {
+        "analyzer": "ik_smart",
+        "type": "text"
+      },
+      "read_count": {
+        "type": "integer"
+      },
+      "like_count": {
+        "type": "integer"
+      },
+      "url": {
+        "type": "keyword"
+      },
+      "is_audio": {
+        "type": "boolean"
+      },
+      "is_video": {
+        "type": "boolean"
+      },
+      "is_infraction": {
+        "type": "boolean"
+      },
+      "position": {
+        "type": "integer"
+      },
+      "is_original": {
+        "type": "boolean"
+      },
+      "keywords": {
+        "type": "keyword"
+      },
+      "state": {
+        "type": "integer"
+      },
+      "infractions": {
+        "type": "integer"
+      },
+      "task_id": {
+        "type": "integer"
+      },
+      "crawler_time": {
+        "type": "date"
+      },
+      "create_time": {
+        "type": "date"
+      },
+      "update_time": {
+        "type": "date"
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "video": {
+    "_all": {
+      "enabled": false
+    },
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "evidenceTime": {
+        "format": "yyyy-MM-dd HH:mm:ss",
+        "type": "date"
+      },
+      "boardKeyId": {
+        "type": "keyword"
+      },
+      "syncSource": {
+        "type": "integer"
+      },
+      "evidenceUser": {
+        "type": "integer"
+      },
+      "processStatus": {
+        "type": "integer"
+      },
+      "isPermittee": {
+        "type": "integer"
+      },
+      "isEffect": {
+        "type": "integer"
+      },
+      "source": {
+        "type": "text"
+      },
+      "postTime": {
+        "type": "date"
+      },
+      "propellingCategoryScore": {
+        "type": "integer"
+      },
+      "containMans": {
+        "analyzer": "ik_smart",
+        "type": "text"
+      },
+      "forwardCount": {
+        "type": "integer"
+      },
+      "keyword": {
+        "type": "keyword"
+      },
+      "propellingHitRegionWord": {
+        "type": "keyword"
+      },
+      "topicTypeName": {
+        "type": "keyword"
+      },
+      "topicTypeWord": {
+        "type": "keyword"
+      },
+      "author": {
+        "type": "keyword"
+      },
+      "siteImportantLevel": {
+        "type": "integer"
+      },
+      "videoType": {
+        "type": "integer"
+      },
+      "dataType": {
+        "type": "integer"
+      },
+      "isCommercial": {
+        "type": "keyword"
+      },
+      "videoPublish": {
+        "type": "integer"
+      },
+      "propellingHitSensitiveWord": {
+        "type": "keyword"
+      },
+      "commentCount": {
+        "type": "integer"
+      },
+      "tags": {
+        "type": "text"
+      },
+      "topicType": {
+        "type": "integer"
+      },
+      "auditTime": {
+        "type": "date"
+      },
+      "domain": {
+        "type": "keyword"
+      },
+      "auditUser": {
+        "type": "integer"
+      },
+      "effectTime": {
+        "type": "date"
+      },
+      "evidenceStatus": {
+        "type": "integer"
+      },
+      "propellingCategoryName": {
+        "type": "keyword"
+      },
+      "siteKeyId": {
+        "type": "keyword"
+      },
+      "keyId": {
+        "type": "keyword"
+      },
+      "siteName": {
+        "type": "keyword"
+      },
+      "remark": {
+        "type": "keyword"
+      },
+      "investigate": {
+        "type": "integer"
+      },
+      "isViolation": {
+        "type": "integer"
+      },
+      "title": {
+        "type": "keyword"
+      },
+      "propellingRegionWord": {
+        "type": "keyword"
+      },
+      "containArea": {
+        "analyzer": "ik_smart",
+        "type": "text"
+      },
+      "content": {
+        "analyzer": "ik_smart",
+        "type": "text"
+      },
+      "titleKeyId": {
+        "type": "keyword"
+      },
+      "isLocalSiteData": {
+        "type": "integer"
+      },
+      "propellingRegionName": {
+        "type": "keyword"
+      },
+      "videoUrl": {
+        "type": "keyword"
+      },
+      "imageUrl": {
+        "type": "keyword"
+      },
+      "viewCount": {
+        "type": "integer"
+      },
+      "crawlerTopicType": {
+        "type": "integer"
+      },
+      "isImportantVA": {
+        "type": "boolean"
+      },
+      "summary": {
+        "analyzer": "ik_smart",
+        "type": "text"
+      },
+      "programType": {
+        "type": "integer"
+      },
+      "isPropelling": {
+        "type": "boolean"
+      },
+      "isNeedCrawlerComment": {
+        "type": "integer"
+      },
+      "isBelongLocal": {
+        "type": "integer"
+      },
+      "url": {
+        "type": "keyword"
+      },
+      "statusList": {
+        "type": "keyword"
+      },
+      "createTime": {
+        "type": "date"
+      },
+      "propellingSensitiveWord": {
+        "type": "keyword"
+      },
+      "articleCategory": {
+        "type": "keyword"
+      },
+      "thumbnailPath": {
+        "type": "keyword"
+      },
+      "auditStatus": {
+        "type": "integer"
+      },
+      "authorImageUrl": {
+        "type": "keyword"
+      }
+    }
+  }
+}
