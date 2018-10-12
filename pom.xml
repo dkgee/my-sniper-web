@@ -47,9 +47,9 @@
 
     <!--ES5.2模板-->
     <dependency>
-      <groupId>com.tank</groupId>
+      <groupId>org.projectx</groupId>
       <artifactId>elasticsearch-template</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.elasticsearch</groupId>
